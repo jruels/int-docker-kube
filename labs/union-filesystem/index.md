@@ -118,17 +118,17 @@ When the directory order is reversed, a new version of `qux` takes precedence an
 
 Now, let's see how docker uses the overlay2 driver to persist images on a docker host.
 
-Make sure we have an image available on the local docker host by grabbing the redis:4.0.11 image.
+Make sure we have an image available on the local docker host by grabbing the redis image.
 
 ```bash
-docker pull redis:4.0.11
+docker pull redis
 ```
 
 Docker has an `inspect` command that can be used to retrieve a json representation of an image's metadata.
 Let's use this command to discover the layers that make up the redis image, as well as the effective command that will be used to mount and render the image's filesystem.
 
 ```bash
-docker inspect redis:4.0.11 | jq -r '.[].GraphDriver'
+docker inspect redis | jq -r '.[].GraphDriver'
 {
   "Data": {
     "LowerDir": "/var/lib/docker/overlay2/8cc191d7e8944039a2ddb8cc17fc30f6bfa0aa8efe77706b987f381daf5561dc/diff:/var/lib/docker/overlay2/526988f6a76344f880e62dc5fd84263ee753ad0ead2dbb1417d31bf2a90267af/diff:/var/lib/docker/overlay2/91319dd0de72b2a4f6268959ee75c245b28cd1ddda3f1fb6833493ab759afc65/diff:/var/lib/docker/overlay2/8a9e2f0ebf929840f3130c9ad3e17d051f3c1ea0c54acbc56ff888cc8fb59838/diff:/var/lib/docker/overlay2/1812eed1e977a42f10daa960a16b19e96503f88c02529bc370900851a9c45df9/diff",
