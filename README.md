@@ -23,3 +23,10 @@ Lab 7: [Create Cluster](labs/eks)
 Lab 8: [Deploy a simple app](labs/pods)   
 Lab 9: [Deploy a multi-tier app](labs/deployments)   
 
+### Day 3   
+Lab 10: [Scheduling](labs/scheduling)   
+Lab 11: [ConfigMap](labs/configmap)   
+Lab 12: [Secrets](labs/secrets)   
+Lab 13: [Helm](labs/helm)   
+Lab 14: [Horizontal Autoscaling](labs/hpa)   
+Lab 15: [Vertical Autoscaling](labs/vpa)   
