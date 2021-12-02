@@ -106,7 +106,7 @@ To confirm this we need to curl the Ingress.
 
 Set an environment variable: 
 ```sh
-export INGRESS_IP=$(kubectl get ingress example-ingress --template "{{ range (index .status.loadBalancer.ingress 0) }}{{.}}{{ end }}")
+export INGRESS_IP=$(kubectl get ingress example-ingress --template {% raw %} "{{ range (index .status.loadBalancer.ingress 0) }}{{.}}{{ end }}") {% endraw %}
 ``` 
 
 Query the endpoints
