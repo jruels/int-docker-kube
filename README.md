@@ -6,6 +6,7 @@ This site includes the slides and labs for the Intermediate Docker Kubernetes cl
 [Slides Day 1](https://www.dropbox.com/s/wztydysgpt3drkk/Intermediate%20Docker-Kubernetes-day1.pdf?dl=0)   
 [Slides Day 2](https://www.dropbox.com/s/s4szyqd0zfbbr5m/Intermediate%20Docker-Kubernetes-day2.pdf?dl=0)   
 [Slides Day 3](https://www.dropbox.com/s/vlh7furgk1njqti/Intermediate%20Docker-Kubernetes-day3.pdf?dl=0)   
+[Slides Day 4](https://www.dropbox.com/s/vlh7furgk1njqti/Intermediate%20Docker-Kubernetes-day3.pdf?dl=0)   
 
 ## Labs
 [Lab VMs](https://docs.google.com/spreadsheets/d/1hqMfSpDqjohHlOX_bwkYhIvntLVW6E8ktLa3uQLHL7k/edit?usp=sharing)   
@@ -31,3 +32,10 @@ Lab 12: [Secrets](labs/secrets)
 Lab 13: [Helm](labs/helm)   
 Lab 14: [Horizontal Autoscaling](labs/hpa)   
 Lab 15: [Vertical Autoscaling](labs/vpa)   
+
+### Day 4   
+Lab 16: [Persistent Storage](labs/persistent-storage)   
+Lab 17: [Health Checks](labs/health-checks)   
+Lab 18: [StatefulSets](labs/stateful)   
+Lab 19: [Ingress](labs/ingress)   
+Lab 20: [Init Containers](labs/init)   
