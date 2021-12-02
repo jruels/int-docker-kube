@@ -2,7 +2,7 @@
 ## Overview 
 To use an ingress on Kubernetes you must have an Ingress controller and ingress routing rules. As there are different ingress controllers that can do this job, it’s important to choose the right one for the type of traffic and load coming into your Kubernetes cluster. In this lab you learn how to use an NGINX ingress controller on Amazon EKS, and how to front-face it with a Network Load Balancer (NLB).
 
-![](index/k6ZY9iBELZuCJCXTR-BBAg.png)
+![](index/k6ZY9iBELZuCJCXTR-BBAg%202.png)
 
 Kubernetes ingress provides the following features: 
 * Content-based routing: e.g.,  routing based on HTTP method, request headers, or other properties of the specific request.
@@ -20,7 +20,7 @@ Pods and nodes are not guaranteed to live for the whole lifetime that the user i
 * Downtime due to outside factors.
 The load balancer (Kubernetes service) is a construct that stands as a single, fixed-service endpoint for a given set of pods or worker nodes. To take advantage of the benefits of a Network Load Balancer (NLB), we create a Kubernetes service of `type:loadbalancer` with the NLB annotations, and this load balancer sits in front of the ingress controller – which is itself a pod or a set of pods. In AWS, for a set of EC2 compute instances managed by an Autoscaling Group, there should be a load balancer that acts as a load balancing mechanism.
 
-![](index/11tDfN7IqiC8qv7bZS50qw.png)
+![](index/11tDfN7IqiC8qv7bZS50qw%202.png)
 
 The diagram above shows a Network Load Balancer in front of the Ingress resource. This load balancer will route traffic to a Kubernetes service (or Ingress) on your cluster that will perform service-specific routing. NLB with the Ingress definition provides the benefits of both a NLB and an Ingress resource.
 
@@ -47,7 +47,9 @@ ingress-nginx-controller-54bfb9bb-zrv2v   1/1     Running     0          31h
 Create two services (`apple.yaml` and `banana.yaml`) to demonstrate how the Ingress routes a request.  Run two web applications that each output a slightly different response. Each of the files below has a service definition and a pod definition.
 
 ```sh
-kubectl apply -f https://raw.githubusercontent.com/cornellanthony/nlb-nginxIngress-eks/master/apple.yaml kubectl apply -f https://raw.githubusercontent.com/cornellanthony/nlb-nginxIngress-eks/master/banana.yaml
+kubectl apply -f https://raw.githubusercontent.com/cornellanthony/nlb-nginxIngress-eks/master/apple.yaml 
+
+kubectl apply -f https://raw.githubusercontent.com/cornellanthony/nlb-nginxIngress-eks/master/banana.yaml
 ```
 
 ## Create ingress rules
