@@ -488,7 +488,7 @@ persistentvolumeclaim "data-mysql-2" deleted
 kubectl delete \
   -f ${HOME}/environment/ebs_statefulset/mysql-statefulset.yaml \
   -f ${HOME}/environment/ebs_statefulset/mysql-services.yaml \
-  -f ${HOME}/environment/ebs_statefulset/mysql-configmap.yaml \
+  -f ${HOME}/environment/ebs_statefulset/mysql-configmap.yaml 
 
 # Delete the mysql namespace 
 kubectl delete namespace mysql
